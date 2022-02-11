@@ -1,0 +1,39 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "io.freefair.lombok" version "6.4.0"
+}
+
+group = 'com.api'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+configurations.all {
+	exclude module: 'spring-boot-starter-logging'
+}
+
+dependencies {
+	// SpringBoot
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// MongoDB 
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.6.3'
+    
+	// Redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.6.3'
+
+	// Jedis
+	implementation 'redis.clients:jedis:4.1.1'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

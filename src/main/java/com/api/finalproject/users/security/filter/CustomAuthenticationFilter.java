@@ -1,6 +1,6 @@
-package com.api.finalproject.security.filter;
+package com.api.finalproject.users.security.filter;
 
-import static com.api.finalproject.security.SecurityConstants.APPLICATION_JSON_VALUE;
+import static com.api.finalproject.users.security.SecurityConstants.APPLICATION_JSON_VALUE;
 
 import java.io.IOException;
 import java.util.Date;

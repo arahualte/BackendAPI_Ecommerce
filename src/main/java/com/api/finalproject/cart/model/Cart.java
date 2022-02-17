@@ -1,4 +1,4 @@
-package com.api.finalproject.model;
+package com.api.finalproject.cart.model;
 
 import java.util.List;
 

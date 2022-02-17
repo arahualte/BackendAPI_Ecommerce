@@ -1,4 +1,4 @@
-package com.api.finalproject.security;
+package com.api.finalproject.users.security;
 
 public class SecurityConstants {
     public static final String SIGN_UP_URL = "/signUp";

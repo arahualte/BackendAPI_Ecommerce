@@ -1,7 +1,7 @@
-package com.api.finalproject.security;
+package com.api.finalproject.users.security;
 
-import com.api.finalproject.security.filter.CustomAuthenticationFilter;
-import com.api.finalproject.security.filter.CustomAuthorizationFilter;
+import com.api.finalproject.users.security.filter.CustomAuthenticationFilter;
+import com.api.finalproject.users.security.filter.CustomAuthorizationFilter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,9 +1,12 @@
-package com.api.finalproject.model;
+package com.api.finalproject.orders.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.Data;
 
 import java.util.List;
+
+import com.api.finalproject.cart.model.CartItem;
+import com.api.finalproject.users.model.User;
 
 import org.springframework.data.annotation.Id;
 

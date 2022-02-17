@@ -1,11 +1,11 @@
-package com.api.finalproject.service.implementations;
+package com.api.finalproject.users.service.implementations;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import com.api.finalproject.model.User;
-import com.api.finalproject.repository.UserRepository;
-import com.api.finalproject.service.services.UserService;
+import com.api.finalproject.users.model.User;
+import com.api.finalproject.users.repository.UserRepository;
+import com.api.finalproject.users.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

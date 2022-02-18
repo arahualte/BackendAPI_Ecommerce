@@ -17,46 +17,25 @@ configurations.all {
 	exclude module: 'spring-boot-starter-logging'
 }
 
-// dependencies {
-// 	// SpringBoot
-// 	// implementation 'org.springframework.boot:spring-boot-starter-security'
-// 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-// 	// testImplementation 'org.springframework.security:spring-security-test'
-// 	// implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.6.3'
-// implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.6.3'
-
-// 	// MongoDB 
-// 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.6.3'
-    
-// 	// JWT
-// 	// implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
-// 	// runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
-// 	// runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
-//     implementation group: 'com.auth0', name: 'java-jwt', version: '3.18.3'
-
-// 	// Javax
-// 	// compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
-// 	// implementation 'javax.xml.bind:jaxb-api:2.3.1'
-
-// 	// Mail
-// 	implementation 'org.springframework.boot:spring-boot-starter-mail:1.2.0.RELEASE'
-// 	implementation 'com.sun.mail:javax.mail:1.6.2'
-
-
-
-
-
-// }
-
 dependencies {
+    
+    // SpringBoot
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.6.3'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.6.3'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.6.3'
-    implementation group: 'redis.clients', name: 'jedis', version: '4.1.1'
     implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.6.3'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.6.3'
+
+    // Mongo
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.6.3'
+    
+    // Log4j2
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.6.3'
+    
+    // JWT
     implementation group: 'com.auth0', name: 'java-jwt', version: '3.18.3'
+
+	// Mail
+	implementation 'org.springframework.boot:spring-boot-starter-mail:1.2.0.RELEASE'
+	implementation 'com.sun.mail:javax.mail:1.6.2'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	

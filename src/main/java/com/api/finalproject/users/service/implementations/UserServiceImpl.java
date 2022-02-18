@@ -28,12 +28,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Autowired
     UserRepository userRepository;
 
-    // @Override
-    // public User saveUser(User user) {
-    // log.info("saving new user {} to the database", user.getUsername());
-    // return userRepository.save();
-    // }
-
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email);
@@ -49,4 +43,5 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
     }
+
 }

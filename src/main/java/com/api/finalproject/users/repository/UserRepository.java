@@ -15,6 +15,10 @@ public class UserRepository {
     @Autowired
     MongoTemplate mongoTemplate;
 
+    public User createUser(User user) {
+        return mongoTemplate.save(user);
+    }
+
     public User findByUserName(String name) {
         Query query = new Query().addCriteria(Criteria.where("username").is(name));
         return mongoTemplate.find(query, User.class).get(0);

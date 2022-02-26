@@ -86,27 +86,16 @@ public class CartRepository {
         return itemList;
     }
 
-    // public CartItem findByProductIdAndUserEmail(String productId, String
-    // userEmail) {
-    // Query query = new
-    // Query().addCriteria(Criteria.where("productId").is(productId).and("userEmail").is(userEmail));
+    public boolean cleanCart(String userEmail) {
+        Query query = new Query().addCriteria(Criteria.where("userEmail").is(userEmail));
+        try {
+            mongoTemplate.findAllAndRemove(query, CartItem.class);
+            return true;
+        } catch (Exception e) {
+            log.error("An error has ocurred: {}", e.getMessage());
+            return false;
+        }
 
-    // return mongoTemplate.find(query, CartItem.class).size() != 0 ?
-    // mongoTemplate.find(query, CartItem.class).get(0)
-    // : null;
-    // }
-
-    // public boolean cleanCart(String userEmail) {
-    // Query query = new
-    // Query().addCriteria(Criteria.where("userEmail").is(userEmail));
-    // try {
-    // mongoTemplate.findAllAndRemove(query, CartItem.class);
-    // return true;
-    // } catch (Exception e) {
-    // log.error("An error has ocurred: {}", e.getMessage());
-    // return false;
-    // }
-
-    // }
+    }
 
 }
